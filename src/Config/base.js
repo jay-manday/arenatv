@@ -4,11 +4,11 @@ import database from 'firebase/database'
 
 const config = {
   apiKey: process.env.REACT_APP_SECRET_CODE,
-  authDomain: 'arenatv-169216.firebaseapp.com',
-  databaseURL: 'https://arenatv-169216.firebaseio.com',
-  projectId: 'arenatv-169216',
-  storageBucket: 'arenatv-169216.appspot.com',
-  messagingSenderId: process.env.REACT_APP_MESSAGING_CODE,
+  authDomain: "multi-tv-f034c.firebaseapp.com",
+  databaseURL: "https://multi-tv-f034c.firebaseio.com",
+  projectId: "multi-tv-f034c",
+  storageBucket: "multi-tv-f034c.appspot.com",
+  messagingSenderId: process.env.REACT_APP_MESSAGING_CODE
 }
 
 const app = firebase.initializeApp(config)

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import base from './helpers/base'
-import Client from './Client'
-import ChannelList from './ChannelList'
+import base from './Config/base'
+import Client from './Components/Client'
+import ChannelList from './Components/ChannelList'
 import {configureUrlQuery, addUrlProps, replaceUrlQuery, UrlQueryParamTypes } from 'react-url-query'
 import Favicon from 'react-favicon'
-import config from './config'
+import config from './Config/config'
 import './App.css'
 
 const urlPropsQueryConfig = {
@@ -44,6 +44,7 @@ class App extends Component {
     }
   }
 
+  // getChannels mount
   componentWillMount = () => {
     this.getChannels()
     this.getWatchers()
@@ -67,7 +68,7 @@ class App extends Component {
   }
 
   getYoutubeId = (url) => {
-    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/
+    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#]*).*/
     const match = url.match(regExp)
     return (match && match[7].length === 11) ? match[7] : '3_XooZ65n6c'
   }

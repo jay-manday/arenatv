@@ -1,6 +1,6 @@
 import React from 'react'
 import Youtube from 'react-youtube'
-import base from './helpers/base'
+import base from '../Config/base'
 
 class Client extends React.Component {
   constructor(props) {
