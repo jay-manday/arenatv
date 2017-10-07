@@ -49,6 +49,7 @@ class App extends Component {
     this.getChannels()
     this.getWatchers()
 
+
     // this.getVids('arena-tv')
     // if channels changes, get all videos again
     // base.listenTo('channels', {
@@ -92,6 +93,7 @@ class App extends Component {
               health: 0,
               username: channel.user.username,
               watchers: 0,
+              //// When adding new channels need to initialize the values below once (can do through firebase)
               // currentVideoIndex: 0,
               // time: 0,
             },
@@ -123,6 +125,7 @@ class App extends Component {
   handleChangeChannel = (e, target) => {
     replaceUrlQuery({'ch': target})
     this.getCurrentChannelName(target)
+    // This function gets videos contained in an arena channel - is only run on click of the menu FYI
     this.getVids(target)
     e.stopPropagation()
     e.preventDefault()
